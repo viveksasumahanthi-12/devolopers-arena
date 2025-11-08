@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — NovaWorks</title>
+  <base href="./">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/logo.svg" />
+</head>
+<body>
+<a class="visually-hidden" href="#main" hidden>Skip to content</a>
+
+<header class="header">
+  <nav class="nav container" aria-label="Main">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" width="120" alt="NovaWorks logo" />
+      <span>NovaWorks</span>
+    </a>
+    <button id="menu-toggle" class="btn ghost menu-toggle" aria-expanded="false">Menu</button>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div id="menu-panel" class="menu-panel" data-open="false">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero container section">
+    <h1>Recent Projects</h1>
+    <p class="lead">A selection of work showing different layouts and components.</p>
+  </section>
+
+  <!-- Project cards -->
+  <section class="container section">
+    <div class="grid-3">
+      <article class="card flow">
+        <h3>Acme Site</h3>
+        <p class="small">Marketing site with pricing grid and blog layout.</p>
+        <a class="btn" href="#">Case Study</a>
+      </article>
+      <article class="card flow">
+        <h3>BlueSky App</h3>
+        <p class="small">Dashboard UI with stats grid and tabs.</p>
+        <a class="btn" href="#">Case Study</a>
+      </article>
+      <article class="card flow">
+        <h3>Northwind Docs</h3>
+        <p class="small">Documentation site with component library.</p>
+        <a class="btn" href="#">Case Study</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section container">
+    <h2>Highlights</h2>
+    <div class="stats-grid">
+      <div class="card"><strong>120+</strong><div class="small">Pages built</div></div>
+      <div class="card"><strong>1.2s</strong><div class="small">Average LCP</div></div>
+      <div class="card"><strong>100%</strong><div class="small">Keyboard access</div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container copy"><p>© <span id="year"></span> NovaWorks</p></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

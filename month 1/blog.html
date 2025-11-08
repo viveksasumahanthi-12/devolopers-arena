@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — NovaWorks</title>
+  <base href="./">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/logo.svg" />
+</head>
+<body>
+<a class="visually-hidden" href="#main" hidden>Skip to content</a>
+
+<header class="header">
+  <nav class="nav container">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" width="120" alt="NovaWorks logo" />
+      <span>NovaWorks</span>
+    </a>
+    <button id="menu-toggle" class="btn ghost menu-toggle">Menu</button>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div id="menu-panel" class="menu-panel" data-open="false">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero container section">
+    <h1>Blog</h1>
+    <p class="lead">Notes on building accessible, fast websites.</p>
+  </section>
+
+  <section class="container blog-list">
+    <article class="card flow">
+      <h3>CSS Grid patterns that scale</h3>
+      <p class="small">Twelve resilient patterns for dashboards and marketing pages.</p>
+      <a class="btn" href="#">Read</a>
+    </article>
+
+    <article class="card flow">
+      <h3>Accessible tabs in 25 lines</h3>
+      <p class="small">Arrow keys, aria-selected, and toggling panels properly.</p>
+      <a class="btn" href="#">Read</a>
+    </article>
+
+    <aside class="card flow">
+      <h3>Tags</h3>
+      <p class="small">HTML • CSS • JS • A11y</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container copy"><p>© <span id="year"></span> NovaWorks</p></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

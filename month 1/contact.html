@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — NovaWorks</title>
+  <base href="./">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/logo.svg" />
+</head>
+<body>
+<a class="visually-hidden" href="#main" hidden>Skip to content</a>
+
+<header class="header">
+  <nav class="nav container">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" width="120" alt="NovaWorks logo" />
+      <span>NovaWorks</span>
+    </a>
+    <button id="menu-toggle" class="btn ghost menu-toggle">Menu</button>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+    <div id="menu-panel" class="menu-panel" data-open="false">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="components/component-library.html">Components</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero container section">
+    <h1>Contact Us</h1>
+    <p class="lead">We usually reply within one business day.</p>
+  </section>
+
+  <section class="container grid-2">
+    <div class="card flow">
+      <h2>Send a message</h2>
+      <form class="form" data-enhance>
+        <label class="label" for="cname">Your name</label>
+        <input class="input" id="cname" required />
+        <label class="label" for="cemail">Email</label>
+        <input class="input" id="cemail" type="email" required />
+        <label class="label" for="cmsg">Message</label>
+        <textarea class="input" id="cmsg" rows="5" required></textarea>
+        <button class="btn">Send Message</button>
+        <p class="small" data-status aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="card flow">
+      <h2>Details</h2>
+      <table class="table small">
+        <tbody>
+          <tr><td>Email</td><td>hello@novaworks.dev</td></tr>
+          <tr><td>Hours</td><td>Mon–Fri · 10am–6pm IST</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container copy"><p>© <span id="year"></span> NovaWorks</p></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+
+
+<script>
+  // small enhancement (status message)
+  document.querySelectorAll('form[data-enhance]').forEach(f=>{
+    f.addEventListener('submit', e=>{
+      e.preventDefault();
+      const s=f.querySelector('[data-status]');
+      if(s){ s.textContent='Message sent. We will get back to you.'; }
+      f.reset();
+    });
+  });
+</script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
