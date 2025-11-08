@@ -1,0 +1,30 @@
+@mixin container {
+  width: 100%;
+  max-width: $container;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@mixin card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 1.25rem;
+}
+
+@mixin btn($bg, $border, $color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6ch;
+  padding: .65rem 1rem;
+  border-radius: 12px;
+  border: 1px solid $border;
+  background: $bg;
+  color: $color;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  &:hover { transform: translateY(-1px); text-decoration: none; }
+}

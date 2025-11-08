@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Components — NovaWorks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="../assets/img/logo.svg" />
+</head>
+<body>
+<a class="visually-hidden" href="#main" hidden>Skip to content</a>
+
+<header class="header">
+  <nav class="nav container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" width="120" alt="NovaWorks logo" />
+      <span>NovaWorks</span>
+    </a>
+    <button id="menu-toggle" class="btn ghost menu-toggle">Menu</button>
+    <div class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../blog.html">Blog</a>
+      <a href="./component-library.html" aria-current="page">Components</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div id="menu-panel" class="menu-panel" data-open="false">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../blog.html">Blog</a>
+      <a href="./component-library.html" aria-current="page">Components</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero container section">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a> › <span aria-current="page">Components</span>
+    </nav>
+    <h1>Component Library</h1>
+    <p class="lead">Reusable, accessible components and **10+ layout patterns**.</p>
+  </section>
+
+  <!-- Buttons -->
+  <section class="container section">
+    <h2>Buttons</h2>
+    <div class="flow">
+      <a class="btn" href="#">Primary</a>
+      <a class="btn secondary" href="#">Secondary</a>
+      <a class="btn ghost" href="#">Ghost</a>
+    </div>
+  </section>
+
+  <!-- Cards / Stats -->
+  <section class="container section">
+    <h2>Cards & Stats</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Card A</h3><p class="small">Supporting text.</p></div>
+      <div class="card"><h3>Card B</h3><p class="small">Supporting text.</p></div>
+      <div class="card"><h3>Card C</h3><p class="small">Supporting text.</p></div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="container section">
+    <h2>Tabs</h2>
+    <div class="card flow" data-tabs>
+      <div class="tabs" role="tablist" aria-label="Demo Tabs">
+        <button role="tab" aria-selected="true" tabindex="0" id="t1" aria-controls="p1">One</button>
+        <button role="tab" aria-selected="false" tabindex="-1" id="t2" aria-controls="p2">Two</button>
+        <button role="tab" aria-selected="false" tabindex="-1" id="t3" aria-controls="p3">Three</button>
+      </div>
+      <div class="tab-panels">
+        <div id="p1" role="tabpanel" aria-labelledby="t1">Tab one content.</div>
+        <div id="p2" role="tabpanel" aria-labelledby="t2" hidden>Tab two content.</div>
+        <div id="p3" role="tabpanel" aria-labelledby="t3" hidden>Tab three content.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion -->
+  <section class="container section">
+    <h2>Accordion</h2>
+    <div class="flow">
+      <details>
+        <summary>Section A</summary>
+        <div class="accordion-panel"><p>Details for section A.</p></div>
+      </details>
+      <details>
+        <summary>Section B</summary>
+        <div class="accordion-panel"><p>Details for section B.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <section class="container section">
+    <h2>Form</h2>
+    <form class="form" data-enhance>
+      <label class="label" for="ex1">Label</label>
+      <input class="input" id="ex1" placeholder="Type here" />
+      <button class="btn">Submit</button>
+      <p class="small" data-status aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- 10+ Layouts -->
+  <section class="container section">
+    <h2>Layouts (10+)</h2>
+    <div class="flow">
+      <div class="card">Split layout (.split)</div>
+      <div class="grid-2"><div class="card">Grid 2</div><div class="card">Grid 2</div></div>
+      <div class="grid-3"><div class="card">Grid 3</div><div class="card">Grid 3</div><div class="card">Grid 3</div></div>
+      <div class="grid-4"><div class="card">Grid 4</div><div class="card">Grid 4</div><div class="card">Grid 4</div><div class="card">Grid 4</div></div>
+      <div class="grid-fit-220"><div class="card">Auto-fit</div><div class="card">Auto-fit</div><div class="card">Auto-fit</div><div class="card">Auto-fit</div></div>
+      <div class="features-grid"><div class="card">Features</div><div class="card">Features</div><div class="card">Features</div></div>
+      <div class="gallery-grid">
+        <div class="card col-6">Gallery 6</div>
+        <div class="card col-3">Gallery 3</div>
+        <div class="card col-3">Gallery 3</div>
+        <div class="card col-4">Gallery 4</div>
+        <div class="card col-4">Gallery 4</div>
+        <div class="card col-4">Gallery 4</div>
+      </div>
+      <div class="pricing-grid"><div class="card">Pricing</div><div class="card">Pricing</div><div class="card">Pricing</div></div>
+      <div class="stats-grid"><div class="card">Stat</div><div class="card">Stat</div><div class="card">Stat</div></div>
+      <div class="blog-list"><div class="card">Blog area</div><aside class="card">Sidebar</aside></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container copy"><p>© <span id="year"></span> NovaWorks</p></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  // Tabs + simple form enhancement (page-local so your main.js stays minimal)
+  (function(){
+    document.querySelectorAll('[data-tabs]').forEach(set=>{
+      const tabs=set.querySelectorAll('[role="tab"]');
+      function show(i){
+        tabs.forEach((t,idx)=>{
+          const sel=idx===i;
+          t.setAttribute('aria-selected', sel);
+          t.tabIndex = sel?0:-1;
+          const pId=t.getAttribute('aria-controls');
+          const p=set.querySelector('#'+pId);
+          if(p) sel? p.removeAttribute('hidden') : p.setAttribute('hidden','');
+        });
+      }
+      tabs.forEach((t,i)=>{
+        t.addEventListener('click',()=>show(i));
+        t.addEventListener('keydown',e=>{
+          if(e.key==='ArrowRight') { e.preventDefault(); show((i+1)%tabs.length); }
+          if(e.key==='ArrowLeft')  { e.preventDefault(); show((i-1+tabs.length)%tabs.length); }
+        });
+      });
+      show(0);
+    });
+
+    document.querySelectorAll('form[data-enhance]').forEach(f=>{
+      f.addEventListener('submit',e=>{
+        e.preventDefault();
+        const s=f.querySelector('[data-status]');
+        if(s) s.textContent='Submitted!';
+        f.reset();
+      });
+    });
+  })();
+</script>
+</body>
+</html>
